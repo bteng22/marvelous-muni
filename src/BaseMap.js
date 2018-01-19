@@ -8,9 +8,9 @@ export default () => {
   return (
     <Fragment>
       <Neighborhoods />
-      <Arteries />
       <Streets />
       <Freeways />
+      <Arteries />
     </Fragment>
   );
 }

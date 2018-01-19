@@ -4,5 +4,10 @@ import arteries from './sfmaps/arteries.json'
 
 export default () => {
   return arteries.features
-    .map((feature, index) => <Path key={index} pathData={feature} />)
+    .map((feature, index) => <Path
+      key={index}
+      pathData={feature}
+      fill={'#ff0000'}
+      stroke={'#ff0000'}
+    />)
 }

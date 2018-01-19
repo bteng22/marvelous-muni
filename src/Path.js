@@ -9,13 +9,13 @@ function getRandomHexColor() {
 }
 
 const Path = (props) => {
-  const { pathData } = props;
+  const { pathData, fill, stroke } = props;
 
   return (
     <path
       style={{
-        fill: getRandomHexColor(),
-        stroke: getRandomHexColor()
+        fill,
+        stroke
       }}
       d={pathGenerator(width, height)(pathData)}
     />
