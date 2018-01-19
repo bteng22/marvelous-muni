@@ -1,12 +1,7 @@
 import React from 'react'
 import pathGenerator from './pathGenerator'
 
-const width = window.innerWidth;
-const height = window.innerHeight;
-
-function getRandomHexColor() {
-  return '#' + ("000000" + Math.random().toString(16).slice(2, 8).toUpperCase()).slice(-6);
-}
+const { innerWidth: width, innerHeight: height } = window
 
 const Path = (props) => {
   const { pathData, fill, stroke } = props;
@@ -17,7 +12,7 @@ const Path = (props) => {
         fill,
         stroke
       }}
-      d={pathGenerator(width, height)(pathData)}
+      d={pathGenerator(pathData, width, height)}
     />
   )
 }
