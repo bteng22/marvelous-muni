@@ -3,17 +3,17 @@ import { getProjection } from './pathGenerator'
 const { innerWidth: width, innerHeight: height } = window
 const projection = getProjection(width, height);
 
-const DirectionalDroplet = ({ vehicleData }) => {
+const DirectionalDroplet = ({ heading }) => {
   return (
     <path
       d={`M15 6 Q 15 6, 25 18 A 12.8 12.8 0 1 1 5 18 Q 15 6 15 6z`}
       fill='black'
-      transform={`scale(0.5) rotate(${vehicleData.heading}) translate(${-15},${-28})`}
+      transform={`scale(0.5) rotate(${heading}) translate(${-15},${-28})`}
     />
   )
 }
 
-const RouteTag = ({ vehicleData }) => {
+const RouteTag = ({ tag }) => {
   const routeTagStyles = {
     'fontSize': 7,
     'strokeWidth': '1px',
@@ -21,7 +21,7 @@ const RouteTag = ({ vehicleData }) => {
     'transform': 'translateY(2px)'
   }
   return (
-    <text textAnchor='middle' style={routeTagStyles}>{vehicleData.routeTag}</text>
+    <text textAnchor='middle' style={routeTagStyles}>{tag}</text>
   )
 }
 
@@ -30,11 +30,15 @@ export default (props) => {
   const coordinates = [Number.parseFloat(vehicleData.lon), Number.parseFloat(vehicleData.lat)]
   return (
     <g
+      style={{
+        transition: 'transform 2s ease-in-out',
+        'willChange': 'transform'
+      }}
       transform-origin='center center'
       transform={`translate(${projection(coordinates)})`}
     >
-      <DirectionalDroplet vehicleData={vehicleData}/>
-      <RouteTag vehicleData={vehicleData}/>
+      <DirectionalDroplet heading={vehicleData.heading}/>
+      <RouteTag tag={vehicleData.routeTag}/>
     </g>
   )
 }

@@ -12,16 +12,13 @@ class Vehicles extends Component {
   }
   
   fetchVehicleLocations() {
-    // fetch(`http://webservices.nextbus.com/service/publicJSONFeed?command=vehicleLocations&a=sf-muni&t=0`)
-    //   .then(res => res.json())
-    //   .then((json) => {
-    //     this.setState({
-    //       vehicleData: json
-    //     });
-    //   })
-    this.setState({
-      vehicleData: json
-    })
+    fetch(`http://webservices.nextbus.com/service/publicJSONFeed?command=vehicleLocations&a=sf-muni&t=0`)
+      .then(res => res.json())
+      .then((json) => {
+        this.setState({
+          vehicleData: json
+        });
+      })
 
     this.timeout = setTimeout(() => this.fetchVehicleLocations(), 15000)
   }
@@ -29,7 +26,7 @@ class Vehicles extends Component {
   renderVehicles(vehicles = []) {
     return vehicles.map((vehicle, index) => {
       return (
-        <Vehicle vehicleData={vehicle} key={index} />
+        <Vehicle vehicleData={vehicle} key={vehicle.id} />
       )
     })
   }
