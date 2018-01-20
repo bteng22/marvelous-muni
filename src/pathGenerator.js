@@ -1,4 +1,3 @@
-import * as d3 from 'd3';
 import { geoMercator, geoPath, geoCentroid } from 'd3-geo';
 import json from './sfmaps/neighborhoods.json';
 
@@ -16,22 +15,22 @@ const getProjectionData = (width, height) => {
     return memo[key];
   }
 
-  var center = geoCentroid(json)
-  var scale  = 150;
-  var offset = [width/2, height/2];
-  var projection = geoMercator().scale(scale).center(center)
+  const center = geoCentroid(json)
+  let scale  = 150;
+  let offset = [width/2, height/2];
+  const projection = geoMercator().scale(scale).center(center)
       .translate(offset);
 
   // create the path
-  var path = geoPath().projection(projection);
+  const path = geoPath().projection(projection);
 
   // using the path determine the bounds of the current map and use 
   // these to determine better values for the scale and translation
-  var bounds  = path.bounds(json);
-  var hscale  = scale*width  / (bounds[1][0] - bounds[0][0]);
-  var vscale  = scale*height / (bounds[1][1] - bounds[0][1]);
-  var scale   = (hscale < vscale) ? hscale : vscale;
-  var offset  = [width - (bounds[0][0] + bounds[1][0])/2,
+  const bounds  = path.bounds(json);
+  const hscale  = scale*width  / (bounds[1][0] - bounds[0][0]);
+  const vscale  = scale*height / (bounds[1][1] - bounds[0][1]);
+  scale   = (hscale < vscale) ? hscale : vscale;
+  offset  = [width - (bounds[0][0] + bounds[1][0])/2,
                 height - (bounds[0][1] + bounds[1][1])/2];
 
 

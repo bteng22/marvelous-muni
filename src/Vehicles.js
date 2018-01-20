@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Vehicle from './Vehicle';
-import json from './vehicleLocations.json';
 
 class Vehicles extends Component {
   constructor(props) {
