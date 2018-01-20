@@ -1,14 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import { getProjection } from './pathGenerator'
+import React, { Component } from 'react';
+import Vehicle from './Vehicle';
 import json from './vehicleLocations.json';
-
-const { innerWidth: width, innerHeight: height } = window
-const routeTagStyles = {
-  'fontSize': 7,
-  'strokeWidth': '1px',
-  'fill': '#fff',
-  'transform': 'translateY(2px)'
-}
 
 class Vehicles extends Component {
   constructor(props) {
@@ -35,25 +27,9 @@ class Vehicles extends Component {
   }
 
   renderVehicles(vehicles = []) {
-    const projection = getProjection(width, height);
     return vehicles.map((vehicle, index) => {
-      const coordinates = [Number.parseFloat(vehicle.lon), Number.parseFloat(vehicle.lat)]
-      const circleProps = {
-        cx: projection(coordinates)[0],
-        cy: projection(coordinates)[1],
-        r: 7,
-        fill: 'black'
-      }
-      const textProps = {
-        textAnchor: 'middle',
-        x: projection(coordinates)[0],
-        y: projection(coordinates)[1]
-      }
       return (
-        <Fragment key={index}>
-          <circle {...circleProps} />
-          <text {...textProps} style={routeTagStyles}>{vehicle.routeTag}</text>
-        </Fragment>
+        <Vehicle vehicleData={vehicle} key={index} />
       )
     })
   }
@@ -67,11 +43,7 @@ class Vehicles extends Component {
   }
 
   render() {
-    return (
-      <g>
-        { this.renderVehicles(this.state.vehicleData.vehicle)}
-      </g> 
-    );
+    return this.renderVehicles(this.state.vehicleData.vehicle)
   }
 }
 
