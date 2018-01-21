@@ -1,0 +1,14 @@
+.route-control__container {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+}
+
+.route-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}

@@ -1,0 +1,422 @@
+{
+  "1": {
+    "title": "1-California",
+    "tag": "1",
+    "visible": true
+  },
+  "2": {
+    "title": "2-Clement",
+    "tag": "2",
+    "visible": true
+  },
+  "3": {
+    "title": "3-Jackson",
+    "tag": "3",
+    "visible": true
+  },
+  "5": {
+    "title": "5-Fulton",
+    "tag": "5",
+    "visible": true
+  },
+  "6": {
+    "title": "6-Haight-Parnassus",
+    "tag": "6",
+    "visible": true
+  },
+  "7": {
+    "title": "7-Haight-Noriega",
+    "tag": "7",
+    "visible": true
+  },
+  "8": {
+    "title": "8-Bayshore",
+    "tag": "8",
+    "visible": true
+  },
+  "9": {
+    "title": "9-San Bruno",
+    "tag": "9",
+    "visible": true
+  },
+  "10": {
+    "title": "10-Townsend",
+    "tag": "10",
+    "visible": true
+  },
+  "12": {
+    "title": "12-Folsom-Pacific",
+    "tag": "12",
+    "visible": true
+  },
+  "14": {
+    "title": "14-Mission",
+    "tag": "14",
+    "visible": true
+  },
+  "18": {
+    "title": "18-46th Avenue",
+    "tag": "18",
+    "visible": true
+  },
+  "19": {
+    "title": "19-Polk",
+    "tag": "19",
+    "visible": true
+  },
+  "21": {
+    "title": "21-Hayes",
+    "tag": "21",
+    "visible": true
+  },
+  "22": {
+    "title": "22-Fillmore",
+    "tag": "22",
+    "visible": true
+  },
+  "23": {
+    "title": "23-Monterey",
+    "tag": "23",
+    "visible": true
+  },
+  "24": {
+    "title": "24-Divisadero",
+    "tag": "24",
+    "visible": true
+  },
+  "25": {
+    "title": "25-Treasure Island",
+    "tag": "25",
+    "visible": true
+  },
+  "27": {
+    "title": "27-Bryant",
+    "tag": "27",
+    "visible": true
+  },
+  "28": {
+    "title": "28-19th Avenue",
+    "tag": "28",
+    "visible": true
+  },
+  "29": {
+    "title": "29-Sunset",
+    "tag": "29",
+    "visible": true
+  },
+  "30": {
+    "title": "30-Stockton",
+    "tag": "30",
+    "visible": true
+  },
+  "31": {
+    "title": "31-Balboa",
+    "tag": "31",
+    "visible": true
+  },
+  "33": {
+    "title": "33-Ashbury-18th St",
+    "tag": "33",
+    "visible": true
+  },
+  "35": {
+    "title": "35-Eureka",
+    "tag": "35",
+    "visible": true
+  },
+  "36": {
+    "title": "36-Teresita",
+    "tag": "36",
+    "visible": true
+  },
+  "37": {
+    "title": "37-Corbett",
+    "tag": "37",
+    "visible": true
+  },
+  "38": {
+    "title": "38-Geary",
+    "tag": "38",
+    "visible": true
+  },
+  "39": {
+    "title": "39-Coit",
+    "tag": "39",
+    "visible": true
+  },
+  "41": {
+    "title": "41-Union",
+    "tag": "41",
+    "visible": true
+  },
+  "43": {
+    "title": "43-Masonic",
+    "tag": "43",
+    "visible": true
+  },
+  "44": {
+    "title": "44-O'Shaughnessy",
+    "tag": "44",
+    "visible": true
+  },
+  "45": {
+    "title": "45-Union-Stockton",
+    "tag": "45",
+    "visible": true
+  },
+  "47": {
+    "title": "47-Van Ness",
+    "tag": "47",
+    "visible": true
+  },
+  "48": {
+    "title": "48-Quintara-24th Street",
+    "tag": "48",
+    "visible": true
+  },
+  "49": {
+    "title": "49-Van Ness-Mission",
+    "tag": "49",
+    "visible": true
+  },
+  "52": {
+    "title": "52-Excelsior",
+    "tag": "52",
+    "visible": true
+  },
+  "54": {
+    "title": "54-Felton",
+    "tag": "54",
+    "visible": true
+  },
+  "55": {
+    "title": "55-16th Street",
+    "tag": "55",
+    "visible": true
+  },
+  "56": {
+    "title": "56-Rutland",
+    "tag": "56",
+    "visible": true
+  },
+  "57": {
+    "title": "57-Parkmerced",
+    "tag": "57",
+    "visible": true
+  },
+  "66": {
+    "title": "66-Quintara",
+    "tag": "66",
+    "visible": true
+  },
+  "67": {
+    "title": "67-Bernal Heights",
+    "tag": "67",
+    "visible": true
+  },
+  "88": {
+    "title": "88-Bart Shuttle",
+    "tag": "88",
+    "visible": true
+  },
+  "90": {
+    "title": "90-San Bruno Owl",
+    "tag": "90",
+    "visible": true
+  },
+  "91": {
+    "title": "91-Owl",
+    "tag": "91",
+    "visible": true
+  },
+  "E": {
+    "title": "E-Embarcadero",
+    "tag": "E",
+    "visible": true
+  },
+  "F": {
+    "title": "F-Market & Wharves",
+    "tag": "F",
+    "visible": true
+  },
+  "J": {
+    "title": "J-Church",
+    "tag": "J",
+    "visible": true
+  },
+  "KT": {
+    "title": "KT-Ingleside/Third Street",
+    "tag": "KT",
+    "visible": true
+  },
+  "L": {
+    "title": "L-Taraval",
+    "tag": "L",
+    "visible": true
+  },
+  "M": {
+    "title": "M-Ocean View",
+    "tag": "M",
+    "visible": true
+  },
+  "N": {
+    "title": "N-Judah",
+    "tag": "N",
+    "visible": true
+  },
+  "NX": {
+    "title": "NX-Express",
+    "tag": "NX",
+    "visible": true
+  },
+  "S": {
+    "title": "S-Shuttle",
+    "tag": "S",
+    "visible": true
+  },
+  "1AX": {
+    "title": "1AX-California A Express",
+    "tag": "1AX",
+    "visible": true
+  },
+  "1BX": {
+    "title": "1BX-California B Express",
+    "tag": "1BX",
+    "visible": true
+  },
+  "5R": {
+    "title": "5R-Fulton Rapid",
+    "tag": "5R",
+    "visible": true
+  },
+  "7X": {
+    "title": "7X-Noriega Express",
+    "tag": "7X",
+    "visible": true
+  },
+  "8AX": {
+    "title": "8AX-Bayshore A Express",
+    "tag": "8AX",
+    "visible": true
+  },
+  "8BX": {
+    "title": "8BX-Bayshore B Express",
+    "tag": "8BX",
+    "visible": true
+  },
+  "9R": {
+    "title": "9R-San Bruno Rapid",
+    "tag": "9R",
+    "visible": true
+  },
+  "14R": {
+    "title": "14R-Mission Rapid",
+    "tag": "14R",
+    "visible": true
+  },
+  "14X": {
+    "title": "14X-Mission Express",
+    "tag": "14X",
+    "visible": true
+  },
+  "24MC": {
+    "title": "24MC-Divisadero Shuttle",
+    "tag": "24MC",
+    "visible": true
+  },
+  "28R": {
+    "title": "28R-19th Avenue Rapid",
+    "tag": "28R",
+    "visible": true
+  },
+  "30X": {
+    "title": "30X-Marina Express",
+    "tag": "30X",
+    "visible": true
+  },
+  "31AX": {
+    "title": "31AX-Balboa A Express",
+    "tag": "31AX",
+    "visible": true
+  },
+  "31BX": {
+    "title": "31BX-Balboa B Express",
+    "tag": "31BX",
+    "visible": true
+  },
+  "38R": {
+    "title": "38R-Geary Rapid",
+    "tag": "38R",
+    "visible": true
+  },
+  "38AX": {
+    "title": "38AX-Geary A Express",
+    "tag": "38AX",
+    "visible": true
+  },
+  "38BX": {
+    "title": "38BX-Geary B Express",
+    "tag": "38BX",
+    "visible": true
+  },
+  "76X": {
+    "title": "76X-Marin Headlands Express",
+    "tag": "76X",
+    "visible": true
+  },
+  "81X": {
+    "title": "81X-Caltrain Express",
+    "tag": "81X",
+    "visible": true
+  },
+  "82X": {
+    "title": "82X-Levi Plaza Express",
+    "tag": "82X",
+    "visible": true
+  },
+  "83X": {
+    "title": "83X-Mid-Market Express",
+    "tag": "83X",
+    "visible": true
+  },
+  "K_OWL": {
+    "title": "K-Owl",
+    "tag": "K_OWL",
+    "visible": true
+  },
+  "L_OWL": {
+    "title": "L-Owl",
+    "tag": "L_OWL",
+    "visible": true
+  },
+  "M_OWL": {
+    "title": "M-Owl",
+    "tag": "M_OWL",
+    "visible": true
+  },
+  "N_OWL": {
+    "title": "N-Owl",
+    "tag": "N_OWL",
+    "visible": true
+  },
+  "T_OWL": {
+    "title": "T-Owl",
+    "tag": "T_OWL",
+    "visible": true
+  },
+  "PM": {
+    "title": "PM-Powell-Mason Cable Car",
+    "tag": "PM",
+    "visible": true
+  },
+  "PH": {
+    "title": "PH-Powell-Hyde Cable Car",
+    "tag": "PH",
+    "visible": true
+  },
+  "C": {
+    "title": "C-California Cable Car",
+    "tag": "C",
+    "visible": true
+  }
+}

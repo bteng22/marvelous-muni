@@ -26,11 +26,12 @@ const RouteTag = ({ tag }) => {
 }
 
 export default (props) => {
-  const { vehicleData } = props;
+  const { vehicleData, visible } = props;
   const coordinates = [Number.parseFloat(vehicleData.lon), Number.parseFloat(vehicleData.lat)]
   return (
     <g
       style={{
+        display: visible === false && 'none',
         transition: 'transform 2s ease-in-out',
         'willChange': 'transform'
       }}

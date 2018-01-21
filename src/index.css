@@ -1,3 +1,7 @@
 body {
   background: #9ddaf8
 }
+
+.container {
+  position: relative;
+}
