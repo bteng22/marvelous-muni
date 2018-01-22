@@ -5,14 +5,15 @@ import Vehicles from '../Vehicles';
 
 class SVGContainer extends PureComponent {
   render() {
-    const { innerWidth: width, innerHeight: height } = window
     const { appState, setAppState } = this.props;
+    const { width, height } = appState;
+    console.log('++++', appState);
     return (
     <svg
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio='xMidYMid slice'
     >
-      <BaseMap />
+      <BaseMap appState={appState}/>
       <Vehicles appState={appState} setAppState={setAppState} /> 
     </svg>
     )

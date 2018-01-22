@@ -6,9 +6,25 @@ class AppState extends Component {
     super(props);
     this.state = {
       routeList: initialRouteList,
-      vehicleData: []
+      vehicleData: [],
+      width: window.innerWidth,
+      height: window.innerHeight 
     }
     this.setAppState = this.setAppState.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+  
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
   setAppState(newState, callback) {

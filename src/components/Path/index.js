@@ -2,9 +2,9 @@ import React from 'react'
 import { generatePath } from '../../utils/geoHandler'
 
 const Path = (props) => {
-  const { innerWidth: width, innerHeight: height } = window
-  const { pathData, fill, stroke } = props;
-
+  const { pathData, fill, stroke, appState } = props;
+  const { width, height } = appState;
+  
   return (
     <path
       style={{
