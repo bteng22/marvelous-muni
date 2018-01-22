@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteControl should match snapshot 1`] = `
+<div
+  className="route-control__container"
+>
+  <ul
+    className="route-list"
+  >
+    <li
+      className="route-list-item route-list-item__title"
+    >
+      <span>
+        Route Toggles
+      </span>
+    </li>
+    <li
+      className="route-list-item"
+    >
+      <input
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        Select All
+      </span>
+    </li>
+    <li
+      className="route-list-item"
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        44-O'Shaughnessy
+      </span>
+    </li>
+    <li
+      className="route-list-item"
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        KT-Ingleside/Third Street
+      </span>
+    </li>
+  </ul>
+</div>
+`;
