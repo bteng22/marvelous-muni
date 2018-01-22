@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import RouteControl from './index';
-import { fakeRouteList } from '../test-data';
+import { fakeRouteList } from '../test-fixtures';
 
 describe('RouteControl', () => {
   const promise = Promise.resolve({ 

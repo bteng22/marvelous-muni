@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Vehicle, { DirectionalDroplet, RouteTag } from './index';
-import { fakeVehicleData } from '../test-data';
+import { fakeVehicleData } from '../test-fixtures';
 
 jest.mock('../../geoHandler', () => ({
     getProjection: () => jest.fn(() => [123, 321])

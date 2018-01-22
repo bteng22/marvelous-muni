@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Vehicles from './index';
-import { fakeRouteList, fakeVehicleData } from '../test-data';
+import { fakeRouteList, fakeVehicleData } from '../test-fixtures';
 
 describe('Vehicles', () => {
   let props;

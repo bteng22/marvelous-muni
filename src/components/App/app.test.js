@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './index';
 import renderer from 'react-test-renderer';
-import { fakeRouteList, fakeVehicleData } from '../test-data';
+import { fakeRouteList, fakeVehicleData } from '../test-fixtures';
 
 describe('App', () => {
   const props = {
