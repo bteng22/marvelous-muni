@@ -1,9 +1,9 @@
 import React, { PureComponent, Fragment } from 'react'
 import PathGenerator from '../PathGenerator';
-import neighborhoodsJSON from '../../sfmaps/neighborhoods.json';
-import arteriesJSON from '../../sfmaps/arteries.json';
-import streetsJSON from '../../sfmaps/streets.json';
-import freewaysJSON from '../../sfmaps/freeways.json';
+import neighborhoodsJSON from '../../geojson/neighborhoods.json';
+import arteriesJSON from '../../geojson/arteries.json';
+import streetsJSON from '../../geojson/streets.json';
+import freewaysJSON from '../../geojson/freeways.json';
 
 export default class BaseMap extends PureComponent {
   render() {
