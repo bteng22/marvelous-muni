@@ -1,5 +1,5 @@
 import React from 'react'
-import { generatePath } from '../../geoHandler'
+import { generatePath } from '../../utils/geoHandler'
 
 const Path = (props) => {
   const { innerWidth: width, innerHeight: height } = window

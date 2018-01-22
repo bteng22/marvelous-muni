@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Path from './index';
-import { generatePath } from '../../geoHandler';
+import { generatePath } from '../../utils/geoHandler';
 
-jest.mock('../../geoHandler', () => ({
+jest.mock('../../utils/geoHandler', () => ({
   generatePath: jest.fn(() => 'some path')
 }))
 

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Vehicle, { DirectionalDroplet, RouteTag } from './index';
 import { fakeVehicleData } from '../test-fixtures';
 
-jest.mock('../../geoHandler', () => ({
+jest.mock('../../utils/geoHandler', () => ({
     getProjection: () => jest.fn(() => [123, 321])
 }))
 

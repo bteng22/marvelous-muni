@@ -1,5 +1,5 @@
 import React from 'react'
-import { getProjection } from '../../geoHandler'
+import { getProjection } from '../../utils/geoHandler'
 
 export const DirectionalDroplet = ({ heading }) => {
   return (

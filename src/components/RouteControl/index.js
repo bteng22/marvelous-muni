@@ -31,7 +31,7 @@ class RouteControl extends Component {
   toggleAllRoutes(event) {
     const { routeList } = this.props.appState;
     const routeListCopy = Object.assign({}, routeList);
-    Object.keys(routeList).map((routeTag) => {
+    Object.keys(routeList).forEach((routeTag) => {
       routeListCopy[routeTag].visible = event.target.checked;
     });
 

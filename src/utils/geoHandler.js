@@ -1,5 +1,5 @@
 import { geoMercator, geoPath, geoCentroid } from 'd3-geo';
-import json from './geojson/neighborhoods.json';
+import json from '../geojson/neighborhoods.json';
 
 const projectionMemo = {};
 
