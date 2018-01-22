@@ -27,7 +27,6 @@ class Vehicles extends Component {
     clearTimeout(this.timeout);
   }
 
-
   renderVehicles(vehicles = []) {
     const { routeList } = this.props.appState;
     return vehicles.map((vehicle, index) => {

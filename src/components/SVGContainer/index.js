@@ -1,23 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BaseMap from '../BaseMap';
 import Vehicles from '../Vehicles';
 
-class SVGContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }
-  render() {
-    return (
-      <svg viewBox={`0 0 ${this.state.width} ${this.state.height}`}>
-        <BaseMap />
-        <Vehicles appState={this.props.appState} setAppState={this.props.setAppState} /> 
-      </svg>
-    );
-  }
+const SVGContainer = (props) => {
+  const { appState, setAppState } = props;
+  return (
+    <svg viewBox={`0 0 ${appState.width} ${appState.height}`}>
+      <BaseMap />
+      <Vehicles appState={appState} setAppState={setAppState} /> 
+    </svg>
+  )
 }
 
 export default SVGContainer;
