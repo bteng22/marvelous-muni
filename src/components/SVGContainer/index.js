@@ -7,9 +7,9 @@ class SVGContainer extends PureComponent {
   render() {
     const { appState, setAppState } = this.props;
     const { width, height } = appState;
-    console.log('++++', appState);
     return (
     <svg
+      className='svg-container'
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio='xMidYMid slice'
     >

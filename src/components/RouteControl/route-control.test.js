@@ -73,5 +73,22 @@ describe('RouteControl', () => {
         }
       });
     })
-  })
+  });
+
+  it('should toggle route menu', () => {
+    const wrapper = shallow(<RouteControl {...props} />);
+    expect(wrapper.state('showMenu')).toBe(false);
+    wrapper.instance().toggleRouteMenu();
+    expect(wrapper.state('showMenu')).toBe(true);
+  });
+
+  it('should apply slide class when showMenu is true', () => {
+    const wrapper = shallow(<RouteControl {...props} />);
+    expect(wrapper.find('.route-list').hasClass('slide')).toBe(false);
+    wrapper.setState({
+      showMenu: true
+    });
+    wrapper.update()
+    expect(wrapper.find('.route-list').hasClass('slide')).toBe(true);
+  });
 });

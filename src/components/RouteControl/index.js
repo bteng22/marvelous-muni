@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './route-control.css';
 
 class RouteControl extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      routeList: this.props.appState.routeList
+      routeList: this.props.appState.routeList,
+      showMenu: false
     }
     this.fetchRouteList = this.fetchRouteList.bind(this);
     this.toggleAllRoutes = this.toggleAllRoutes.bind(this);
+    this.toggleRouteMenu = this.toggleRouteMenu.bind(this);
   }
 
   fetchRouteList() {
@@ -54,6 +56,12 @@ class RouteControl extends Component {
     })
   }
 
+  toggleRouteMenu() {
+    this.setState({
+      showMenu: !this.state.showMenu
+    });
+  }
+
   renderRouteList(routeList) {
     return routeList.map((route) => {
       return (
@@ -78,22 +86,37 @@ class RouteControl extends Component {
 
   render() {
     const { routeList } = this.props.appState;
+    const { showMenu } = this.state;
     return (
-      <div className='route-control__container'>
-        <ul className='route-list'>
-          <li className="route-list-item route-list-item__title">
-            <span>Route Toggles</span>
-          </li>
-          <li className="route-list-item">
-            <input
-              type="checkbox"
-              onChange={this.toggleAllRoutes}  
-            />
-            <span>Select All</span>
-          </li>
-          { this.renderRouteList(Object.values(routeList))}
-        </ul> 
-      </div>
+      <Fragment>
+        <div className='route-control__container'>
+          <button
+            className='route-control__button'
+            onClick={this.toggleRouteMenu}
+          >
+            Route Toggles >
+          </button>
+          <ul className={`route-list ${showMenu ? 'slide' : ''}`}>
+            <li className="route-list-item route-list-item__title">
+              <span>Route Toggles</span>
+              <i
+                onClick={this.toggleRouteMenu}
+                className="route-control__button route-control--exit"
+              >
+                X
+              </i>
+            </li>
+            <li className="route-list-item">
+              <input
+                type="checkbox"
+                onChange={this.toggleAllRoutes}  
+              />
+              <span>Select All</span>
+            </li>
+            { this.renderRouteList(Object.values(routeList))}
+          </ul> 
+        </div>
+      </Fragment>
     );
   }
 }

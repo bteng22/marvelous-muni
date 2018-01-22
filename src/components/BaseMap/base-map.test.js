@@ -12,10 +12,4 @@ describe('BaseMap', () => {
     const wrapper = shallow(<BaseMap />);
     expect(wrapper.children().length).toBe(4);
   });
-
-  it('should match snapshot', () => {
-    const component = shallow(<BaseMap />)
-    const fragment = component.instance().render()
-    expect(shallow(<div>{fragment}</div>).getElement()).toMatchSnapshot()
-  });
 });

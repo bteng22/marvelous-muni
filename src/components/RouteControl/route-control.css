@@ -1,5 +1,6 @@
 .route-control__container {
   display: flex;
+  margin: 20px;
   flex-direction: column;
   width: 250px;
   height: 350px;
@@ -7,6 +8,14 @@
   right: 0;
   overflow-y: scroll;
   border-radius: 3px;
+}
+
+.route-control__button {
+  display: none;
+}
+
+.route-control__close {
+  display: none;
 }
 
 .route-list {
@@ -40,4 +49,37 @@
   margin-left: 32px;
   font-weight: 700;
   font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .route-control__container {
+    height: 100%;
+    margin: 0;
+  }
+
+  .route-list {
+    transition: transform 0.5s;
+    transform: translateX(250px)
+  }
+
+  .route-list.slide {
+    transform: translateX(0);
+  }
+
+  .route-control__button {
+    display: initial;
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+  }
+  
+  .route-control--exit {
+    margin-top: 0px;
+    position: initial;
+    right: initial;
+    align-self: center;
+    font-style: normal;
+    padding: 5px;
+    cursor: pointer;
+  }
 }

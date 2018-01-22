@@ -9,6 +9,10 @@ jest.mock('../../utils/geoHandler', () => ({
 
 describe('Path', () => {
   const props = {
+    appState: {
+      width: 123,
+      height: 321
+    },
     pathData: {},
     fill: '#fill',
     stroke: '#stroke'
@@ -27,8 +31,6 @@ describe('Path', () => {
   });
 
   it('should call generatePath with correct props', () => {
-    window.innerWidth = 123;
-    window.innerHeight = 321;
     shallow(<Path {...props} />);
     expect(generatePath).toHaveBeenCalledWith({}, 123, 321);
   });

@@ -13,8 +13,10 @@ describe('SVGContainer', () => {
   })
 
   it('should render successfully', () => {
-    window.innerWidth = 123;
-    window.innerHeight = 321;
+    props.appState = {
+      width: 123,
+      height: 321
+    }
     const wrapper = shallow(<SVGContainer {...props} />);
     expect(wrapper.find('svg').length).toEqual(1);
     expect(wrapper.find('svg').prop('viewBox')).toEqual('0 0 123 321')

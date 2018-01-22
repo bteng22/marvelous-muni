@@ -1,7 +1,12 @@
 body {
-  background: #9ddaf8
+  background: #9ddaf8;
+  margin: 0;
 }
 
 .container {
   position: relative;
+}
+
+.svg-container {
+  margin: 20px;
 }

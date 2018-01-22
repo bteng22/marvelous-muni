@@ -4,8 +4,14 @@ exports[`RouteControl should match snapshot 1`] = `
 <div
   className="route-control__container"
 >
+  <button
+    className="route-control__button"
+    onClick={[Function]}
+  >
+    Route Toggles &gt;
+  </button>
   <ul
-    className="route-list"
+    className="route-list "
   >
     <li
       className="route-list-item route-list-item__title"
@@ -13,6 +19,12 @@ exports[`RouteControl should match snapshot 1`] = `
       <span>
         Route Toggles
       </span>
+      <i
+        className="route-control__button route-control--exit"
+        onClick={[Function]}
+      >
+        X
+      </i>
     </li>
     <li
       className="route-list-item"
