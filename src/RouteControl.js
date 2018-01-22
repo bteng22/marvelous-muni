@@ -8,6 +8,7 @@ class RouteControl extends Component {
       routeList: this.props.appState.routeList
     }
     this.fetchRouteList = this.fetchRouteList.bind(this);
+    this.toggleAllRoutes = this.toggleAllRoutes.bind(this);
   }
 
   fetchRouteList() {
@@ -27,6 +28,18 @@ class RouteControl extends Component {
       })
   }
 
+  toggleAllRoutes(event) {
+    const { routeList } = this.props.appState;
+    const routeListCopy = Object.assign({}, routeList);
+    Object.keys(routeList).map((routeTag) => {
+      routeListCopy[routeTag].visible = event.target.checked;
+    });
+
+    this.props.setAppState({
+      routeList: routeListCopy
+    });
+  }
+
   toggleRouteCheckbox(route) {
     const { routeList } = this.props.appState;
     const updatedRoutes = Object.assign({}, routeList, {
@@ -44,12 +57,16 @@ class RouteControl extends Component {
   renderRouteList(routeList) {
     return routeList.map((route) => {
       return (
-        <li key={route.tag}>
+        <li 
+          key={ route.tag }
+          className="route-list-item"
+        >
           <input
             type="checkbox"
             checked={route.visible}
             onChange={() => this.toggleRouteCheckbox(route)}
-          />{route.title}
+          />
+          <span>{ route.title }</span>
         </li>
       )
     })
@@ -64,6 +81,16 @@ class RouteControl extends Component {
     return (
       <div className='route-control__container'>
         <ul className='route-list'>
+          <li className="route-list-item route-list-item__title">
+            <span>Route Toggles</span>
+          </li>
+          <li className="route-list-item">
+            <input
+              type="checkbox"
+              onChange={this.toggleAllRoutes}  
+            />
+            <span>Select All</span>
+          </li>
           { this.renderRouteList(Object.values(routeList))}
         </ul> 
       </div>
