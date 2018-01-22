@@ -1,7 +1,5 @@
 import React from 'react'
-import { getProjection } from '../../pathGenerator'
-const { innerWidth: width, innerHeight: height } = window
-const projection = getProjection(width, height);
+import { getProjection } from '../../geoHandler'
 
 const DirectionalDroplet = ({ heading }) => {
   return (
@@ -26,14 +24,16 @@ const RouteTag = ({ tag }) => {
 }
 
 export default (props) => {
+  const { innerWidth: width, innerHeight: height } = window
+  const projection = getProjection(width, height);
+
   const { vehicleData, visible } = props;
   const coordinates = [Number.parseFloat(vehicleData.lon), Number.parseFloat(vehicleData.lat)]
   return (
     <g
       style={{
         display: visible === false && 'none',
-        transition: 'transform 2s ease-in-out',
-        'willChange': 'transform'
+        transition: 'transform 2s ease-in-out'
       }}
       transform-origin='center center'
       transform={`translate(${projection(coordinates)})`}

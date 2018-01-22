@@ -5,8 +5,6 @@ class AppState extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: window.innerWidth,
-      height: window.innerHeight,
       routeList: initialRouteList,
       vehicleData: []
     }

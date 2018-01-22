@@ -1,9 +1,9 @@
 import React from 'react'
-import pathGenerator from '../../pathGenerator'
+import { generatePath } from '../../geoHandler'
 
-const { innerWidth: width, innerHeight: height } = window
 
 const Path = (props) => {
+  const { innerWidth: width, innerHeight: height } = window
   const { pathData, fill, stroke } = props;
 
   return (
@@ -12,7 +12,7 @@ const Path = (props) => {
         fill,
         stroke
       }}
-      d={pathGenerator(pathData, width, height)}
+      d={generatePath(pathData, width, height)}
     />
   )
 }
