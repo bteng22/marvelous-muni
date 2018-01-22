@@ -1,5 +1,5 @@
 import React from 'react'
-import { getProjection } from './pathGenerator'
+import { getProjection } from '../../pathGenerator'
 const { innerWidth: width, innerHeight: height } = window
 const projection = getProjection(width, height);
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './index.css'
-import RouteControl from './RouteControl';
-import SVGContainer from './SVGContainer';
+import RouteControl from '../RouteControl';
+import SVGContainer from '../SVGContainer';
 
 class App extends Component {
   constructor(props) {

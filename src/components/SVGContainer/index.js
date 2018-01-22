@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BaseMap from './BaseMap';
-import Vehicles from './Vehicles';
+import BaseMap from '../BaseMap';
+import Vehicles from '../Vehicles';
 
 class SVGContainer extends Component {
   constructor(props) {

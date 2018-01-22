@@ -1,5 +1,5 @@
 import React from 'react'
-import pathGenerator from './pathGenerator'
+import pathGenerator from '../../pathGenerator'
 
 const { innerWidth: width, innerHeight: height } = window
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Path from './Path';
-import streets from './sfmaps/streets.json'
+import Path from '../Path';
+import streets from '../../sfmaps/streets.json'
 
 export default () => {
   return streets.features

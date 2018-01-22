@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import initialRouteList from './initialRouteList.json';
+import initialRouteList from './initial-route-list.json';
 
 class AppState extends Component {
   constructor(props) {
